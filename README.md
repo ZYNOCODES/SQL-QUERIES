@@ -2,17 +2,17 @@
 
 #INDEXING:
 
--- First, ensure that the index is created
+-- First, ensure that the index is created 
 
-CREATE INDEX idx_panne_typepanne ON panne (panne);
+CREATE INDEX idx_panne_agent ON panne (agent);
 
 -- Then, add the foreign key constraint
 
 ALTER TABLE panne
 
-ADD CONSTRAINT fk_panne_typepanne
+ADD CONSTRAINT fk_panne_agent
 
-FOREIGN KEY (panne) REFERENCES typepanne(id)
+FOREIGN KEY (agent) REFERENCES agent(id)
 
 ON DELETE CASCADE
 
