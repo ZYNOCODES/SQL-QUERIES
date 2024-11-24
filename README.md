@@ -18,3 +18,7 @@ ON DELETE CASCADE
 
 ON UPDATE CASCADE;
 
+#make a column unique
+ALTER TABLE profile ADD CONSTRAINT unique_username UNIQUE (username);
+
+
