@@ -1,11 +1,12 @@
 # SQL-QUERIES
 
-#INDEXING:
+#ADD INDEXING:
 
 -- First, ensure that the index is created 
 
 CREATE INDEX idx_panne_agent ON panne (agent);
 
+#ADD FOREIGN KEY
 -- Then, add the foreign key constraint
 
 ALTER TABLE panne
@@ -18,7 +19,12 @@ ON DELETE CASCADE
 
 ON UPDATE CASCADE;
 
-#make a column unique
+#DELETE 
+
+ALTER TABLE `avancement` DROP FOREIGN KEY `fk_global_geniecivil`;
+
+#MAKE A COLUMN UNIQUE
+
 ALTER TABLE profile ADD CONSTRAINT unique_username UNIQUE (username);
 
 
